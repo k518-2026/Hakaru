@@ -9,6 +9,11 @@ UI は **7 言語**（日本語・English・简体中文・한국어・Deutsch�
 
 ![type](https://img.shields.io/badge/type-drive%20utility-35c1a6) ![ui](https://img.shields.io/badge/WPF-.NET%2010-512bd4) ![deps](https://img.shields.io/badge/NuGet-none-blue) ![i18n](https://img.shields.io/badge/languages-7-informational)
 
+## ダウンロード
+
+[Releases](https://github.com/k518-2026/Hakaru/releases) から `Hakaru.zip` をダウンロードし、
+展開してできた `Hakaru.exe` を実行してください。インストールや .NET ランタイムは不要です。
+
 ---
 
 ## できること
@@ -33,7 +38,8 @@ UI は **7 言語**（日本語・English・简体中文・한국어・Deutsch�
 
 - 既存ファイルには一切触れず、専用フォルダー `__hakaru_captest__` だけを使います
 - 「クイックテスト」で一部だけ（1〜16 GiB）を素早く確認することもできます
-- 終了後はテストファイルを自動削除（残すオプションあり）。異常終了時の残置は起動時に検出して削除を提案します
+- 終了後はテストファイルを自動削除（残すオプションあり）。異常終了などでテストファイルが残っていると、
+  そのドライブを選んだときに知らせ、「削除する」ボタンで消せます
 
 ---
 
@@ -53,7 +59,7 @@ UI は **7 言語**（日本語・English・简体中文・한국어・Deutsch�
 ## 動作環境とビルド
 
 - Windows 10 / 11（x64）
-- 配布版の `Hakaru.exe` は .NET ランタイムを同梱した単一ファイルなので、インストール不要でそのまま動きます
+- 配布版（Releases の `Hakaru.zip`）の `Hakaru.exe` は .NET ランタイムを同梱した単一ファイルなので、インストール不要でそのまま動きます
 - ソースからビルドする場合: Visual Studio 2026（ワークロード「**.NET デスクトップ開発**」）／ または .NET 10 SDK
 - 外部 NuGet パッケージへの依存はありません
 - 通常のユーザー権限で動作します（`app.manifest` は `asInvoker`。バッファなし I/O に管理者権限は不要）
@@ -93,6 +99,7 @@ Hakaru.slnx
    ├ Common/                         MVVM 補助 + 単位整形（MB/s, GiB, IOPS…）
    ├ Localization/                   LocalizationManager + Strings.*.xaml ×7
    ├ Models/Models.cs                DriveItem / BenchmarkResult / CapacityTestResult ほか
+   ├ Properties/PublishProfiles/     単一 exe 発行用のプロファイル（win-x64・ランタイム同梱）
    ├ ViewModels/MainViewModel.cs
    └ Services/
       ├ NativeMethods.cs             CreateFileW / ReadFile / WriteFile / SHFileOperation の P/Invoke
@@ -100,7 +107,8 @@ Hakaru.slnx
       ├ BenchmarkService.cs          逐次 / ランダム速度計測
       ├ CapacityTestService.cs       容量いっぱいの書き込み → 読み戻し照合
       ├ DriveService.cs              ドライブ列挙・セクターサイズ取得
-      └ SettingsService.cs          設定の保存 / 読み込み
+      ├ SettingsService.cs           設定の保存 / 読み込み
+      └ ShellService.cs              エクスプローラーで開く・残ったテストファイルの検出と削除
 ```
 
 ### 検証パターン（容量偽装の見分け方）
