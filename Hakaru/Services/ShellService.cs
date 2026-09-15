@@ -20,6 +20,7 @@ public static class ShellService
     public static bool CleanupLeftovers(string rootPath)
     {
         bool any = false;
+        if (DriveService.IsSystemVolume(rootPath)) return false;   // OS のドライブでは何も消さない
         try
         {
             string folder = Path.Combine(rootPath, CapacityTestService.FolderName);

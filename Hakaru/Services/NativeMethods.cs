@@ -60,6 +60,11 @@ internal static class NativeMethods
         string lpRootPathName, out uint lpSectorsPerCluster, out uint lpBytesPerSector,
         out uint lpNumberOfFreeClusters, out uint lpTotalNumberOfClusters);
 
+    [DllImport("kernel32.dll", SetLastError = true, CharSet = CharSet.Unicode)]
+    [return: MarshalAs(UnmanagedType.Bool)]
+    public static extern bool GetVolumeNameForVolumeMountPointW(
+        string lpszVolumeMountPoint, [Out] char[] lpszVolumeName, uint cchBufferLength);
+
     // ---- ごみ箱 ----
     public const uint FO_DELETE = 0x0003;
     public const ushort FOF_NOCONFIRMATION = 0x0010;

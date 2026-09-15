@@ -31,6 +31,9 @@ public sealed class CapacityTestService
     private CapacityTestResult Run(string rootPath, long? limitBytes, bool keepFiles,
                                    IProgress<CapacityProgress>? progress, CancellationToken ct)
     {
+        // try の外で止める。中で止めると Finish がテストフォルダーの削除を試みてしまう
+        DriveService.EnsureNotSystemVolume(rootPath);
+
         var result = new CapacityTestResult();
         string folder = Path.Combine(rootPath, FolderName);
         ulong seed = unchecked((ulong)Random.Shared.NextInt64()) | 1UL;

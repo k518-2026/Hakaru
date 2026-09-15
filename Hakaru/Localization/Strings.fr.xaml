@@ -52,8 +52,7 @@
     <s:String x:Key="CleanNow">Les supprimer</s:String>
     <s:String x:Key="Cleaned">Fichiers de test supprimés.</s:String>
     <s:String x:Key="OpenFolderBtn">Ouvrir le lecteur</s:String>
-    <s:String x:Key="SystemDriveWarnFmt">{0} semble être votre lecteur Windows. Ce test est conçu pour les clés USB et les cartes SD. Continuer quand même ?</s:String>
-    <s:String x:Key="ConfirmTitle">Confirmer</s:String>
+    <s:String x:Key="SystemDriveBlockedFmt">{0} est le lecteur sur lequel Windows est installé. Pour protéger le système, ce lecteur ne peut pas être testé.</s:String>
     <s:String x:Key="NoDrive">Aucun lecteur sélectionné.</s:String>
 
 </ResourceDictionary>

@@ -52,8 +52,7 @@
     <s:String x:Key="CleanNow">Löschen</s:String>
     <s:String x:Key="Cleaned">Testdateien gelöscht.</s:String>
     <s:String x:Key="OpenFolderBtn">Laufwerk öffnen</s:String>
-    <s:String x:Key="SystemDriveWarnFmt">{0} scheint Ihr Windows-Laufwerk zu sein. Dieser Test ist für USB-Sticks und SD-Karten gedacht. Trotzdem fortfahren?</s:String>
-    <s:String x:Key="ConfirmTitle">Bestätigen</s:String>
+    <s:String x:Key="SystemDriveBlockedFmt">{0} ist das Laufwerk, auf dem Windows installiert ist. Zum Schutz des Betriebssystems kann dieses Laufwerk nicht getestet werden.</s:String>
     <s:String x:Key="NoDrive">Kein Laufwerk ausgewählt.</s:String>
 
 </ResourceDictionary>

@@ -29,6 +29,9 @@ public sealed class BenchmarkService
 
     private BenchmarkResult Run(string rootPath, long fileBytes, IProgress<BenchProgress>? progress, CancellationToken ct)
     {
+        // 画面側で除外していても、書き込みの直前でもう一度止める
+        DriveService.EnsureNotSystemVolume(rootPath);
+
         fileBytes = Math.Max(MinFileBytes, fileBytes / SeqBlock * SeqBlock);
         string folder = Path.Combine(rootPath, FolderName);
         string path = Path.Combine(folder, TempName);

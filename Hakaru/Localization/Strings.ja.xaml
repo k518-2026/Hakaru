@@ -52,8 +52,7 @@
     <s:String x:Key="CleanNow">削除する</s:String>
     <s:String x:Key="Cleaned">テストファイルを削除しました。</s:String>
     <s:String x:Key="OpenFolderBtn">ドライブを開く</s:String>
-    <s:String x:Key="SystemDriveWarnFmt">{0} は Windows のドライブのようです。このテストは USB メモリや SD カード向けです。それでも続けますか？</s:String>
-    <s:String x:Key="ConfirmTitle">確認</s:String>
+    <s:String x:Key="SystemDriveBlockedFmt">{0} は Windows が入っているドライブです。OS を守るため、このドライブはテストできません。</s:String>
     <s:String x:Key="NoDrive">ドライブが選択されていません。</s:String>
 
 </ResourceDictionary>

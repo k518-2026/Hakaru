@@ -52,8 +52,7 @@
     <s:String x:Key="CleanNow">删除它们</s:String>
     <s:String x:Key="Cleaned">已删除测试文件。</s:String>
     <s:String x:Key="OpenFolderBtn">打开驱动器</s:String>
-    <s:String x:Key="SystemDriveWarnFmt">{0} 看起来是你的 Windows 系统盘。此测试适用于 U 盘和 SD 卡。仍要继续吗？</s:String>
-    <s:String x:Key="ConfirmTitle">确认</s:String>
+    <s:String x:Key="SystemDriveBlockedFmt">{0} 是安装了 Windows 的驱动器。为保护操作系统，无法测试此驱动器。</s:String>
     <s:String x:Key="NoDrive">未选择驱动器。</s:String>
 
 </ResourceDictionary>

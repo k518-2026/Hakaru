@@ -55,8 +55,7 @@
     <s:String x:Key="CleanNow">Delete them</s:String>
     <s:String x:Key="Cleaned">Test files deleted.</s:String>
     <s:String x:Key="OpenFolderBtn">Open drive</s:String>
-    <s:String x:Key="SystemDriveWarnFmt">{0} looks like your Windows drive. This test is meant for USB sticks and SD cards. Continue anyway?</s:String>
-    <s:String x:Key="ConfirmTitle">Confirm</s:String>
+    <s:String x:Key="SystemDriveBlockedFmt">{0} is the drive Windows is installed on. To protect the operating system, this drive cannot be tested.</s:String>
     <s:String x:Key="NoDrive">No drive selected.</s:String>
 
 </ResourceDictionary>

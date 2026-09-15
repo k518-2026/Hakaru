@@ -97,7 +97,16 @@ public sealed class MainViewModel : ObservableObject
 
     public string DriveInfoText => SelectedDrive is { } d
         ? LocalizationManager.Format("DriveInfoFmt", Fmt.BytesDecimal(d.TotalSize), Fmt.Bytes(d.FreeSpace))
-        : "";
+        : L("NoDrive");
+
+    /// <summary>OS のドライブならメッセージを出して false。一覧から除外済みでも、開始の直前に確かめる。</summary>
+    private static bool ConfirmNotSystemDrive(DriveItem drive)
+    {
+        if (!DriveService.IsSystemVolume(drive.RootPath)) return true;
+        MessageBox.Show(LocalizationManager.Format("SystemDriveBlockedFmt", drive.RootPath),
+            L("AppTitle"), MessageBoxButton.OK, MessageBoxImage.Stop);
+        return false;
+    }
 
     private bool _leftoverVisible;
     public bool LeftoverVisible { get => _leftoverVisible; private set => Set(ref _leftoverVisible, value); }
@@ -170,6 +179,7 @@ public sealed class MainViewModel : ObservableObject
     private async Task RunBenchmarkAsync()
     {
         if (SelectedDrive is not { } drive) return;
+        if (!ConfirmNotSystemDrive(drive)) return;
 
         _benchCts?.Dispose();
         _benchCts = new CancellationTokenSource();
@@ -198,6 +208,10 @@ public sealed class MainViewModel : ObservableObject
             BenchStatusText = result.Canceled
                 ? L("BenchCanceled")
                 : LocalizationManager.Format("BenchDoneFmt", Fmt.Bytes(result.TestFileBytes));
+        }
+        catch (SystemDriveException sx)
+        {
+            BenchStatusText = LocalizationManager.Format("SystemDriveBlockedFmt", sx.TargetPath);
         }
         catch (Exception ex)
         {
@@ -294,13 +308,7 @@ public sealed class MainViewModel : ObservableObject
     {
         if (SelectedDrive is not { } drive) return;
 
-        if (drive.IsSystem)
-        {
-            var proceed = MessageBox.Show(
-                LocalizationManager.Format("SystemDriveWarnFmt", drive.RootPath),
-                L("ConfirmTitle"), MessageBoxButton.OKCancel, MessageBoxImage.Warning);
-            if (proceed != MessageBoxResult.OK) return;
-        }
+        if (!ConfirmNotSystemDrive(drive)) return;
 
         var ok = MessageBox.Show(L("CapWarn"), L("CapWarnTitle"),
             MessageBoxButton.OKCancel, MessageBoxImage.Information);
@@ -335,6 +343,12 @@ public sealed class MainViewModel : ObservableObject
             var result = await _capacity.RunAsync(drive.RootPath, limit, KeepTestFiles, progress, _capCts.Token);
             _lastCapacity = result;
             RenderCapacityResult(result);
+        }
+        catch (SystemDriveException sx)
+        {
+            CapResultIsWarning = true;
+            CapResultTitle = L("ResultTitle");
+            CapResultText = LocalizationManager.Format("SystemDriveBlockedFmt", sx.TargetPath);
         }
         catch (Exception ex)
         {

@@ -6,7 +6,6 @@ public sealed record DriveItem(
     string RootPath,
     string Display,
     bool IsRemovable,
-    bool IsSystem,
     long TotalSize,
     long FreeSpace)
 {

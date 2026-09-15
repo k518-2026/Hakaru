@@ -52,8 +52,7 @@
     <s:String x:Key="CleanNow">Eliminarlos</s:String>
     <s:String x:Key="Cleaned">Archivos de prueba eliminados.</s:String>
     <s:String x:Key="OpenFolderBtn">Abrir unidad</s:String>
-    <s:String x:Key="SystemDriveWarnFmt">{0} parece ser tu unidad de Windows. Esta prueba está pensada para memorias USB y tarjetas SD. ¿Continuar de todos modos?</s:String>
-    <s:String x:Key="ConfirmTitle">Confirmar</s:String>
+    <s:String x:Key="SystemDriveBlockedFmt">{0} es la unidad donde está instalado Windows. Para proteger el sistema operativo, no se puede probar esta unidad.</s:String>
     <s:String x:Key="NoDrive">No hay ninguna unidad seleccionada.</s:String>
 
 </ResourceDictionary>
