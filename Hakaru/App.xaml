@@ -203,7 +203,14 @@
                                 </ToggleButton>
                                 <ContentPresenter IsHitTestVisible="False" Content="{TemplateBinding SelectionBoxItem}"
                                                   ContentTemplate="{TemplateBinding SelectionBoxItemTemplate}"
-                                                  Margin="11,0,32,0" VerticalAlignment="Center" />
+                                                  Margin="11,0,32,0" VerticalAlignment="Center">
+                                    <!-- 長いドライブ名は ▼ に重ねず「…」で省略する -->
+                                    <ContentPresenter.Resources>
+                                        <Style TargetType="TextBlock">
+                                            <Setter Property="TextTrimming" Value="CharacterEllipsis" />
+                                        </Style>
+                                    </ContentPresenter.Resources>
+                                </ContentPresenter>
                                 <Popup x:Name="PART_Popup" Placement="Bottom" Focusable="False" AllowsTransparency="True"
                                        IsOpen="{TemplateBinding IsDropDownOpen}">
                                     <Border Background="{StaticResource Panel}" BorderBrush="{StaticResource Accent}"
