@@ -1,5 +1,8 @@
 # Hakaru（測る）— ディスク速度ベンチマーク / 容量偽装チェック
 
+実行ファイルのダウンロード.
+https://github.com/k518-2026/Hakaru/releases
+
 USB メモリや SD カードの **本当の読み書き速度** を測り、**容量偽装品**（「64GB」と書いてあるのに
 実際は数 GB しかないフラッシュメモリ）を検出する Windows デスクトップアプリです。
 
@@ -8,11 +11,6 @@ UI は **7 言語**（日本語・English・简体中文・한국어・Deutsch�
 実行中に切り替えられます。
 
 ![type](https://img.shields.io/badge/type-drive%20utility-35c1a6) ![ui](https://img.shields.io/badge/WPF-.NET%2010-512bd4) ![deps](https://img.shields.io/badge/NuGet-none-blue) ![i18n](https://img.shields.io/badge/languages-7-informational)
-
-## ダウンロード
-
-[Releases](https://github.com/k518-2026/Hakaru/releases) から `Hakaru.zip` をダウンロードし、
-展開してできた `Hakaru.exe` を実行してください。インストールや .NET ランタイムは不要です。
 
 ---
 
@@ -125,6 +123,9 @@ Hakaru.slnx
 
 ## 注意
 
+- **このアプリの測定・判定は完璧ではありません。** 結果は目安として使い、大切なデータを保存する前や、
+  製品の返品・交換を判断する前には、ほかのアプリでも検証してください。
+  容量偽装の確認は H2testw や F3、速度の確認は CrystalDiskMark などと結果を見比べることをおすすめします。
 - 容量チェックはドライブの空き容量をほぼ使い切るまで書き込みます。終わるまでドライブを抜かないでください。
 - SSD に対してフルの容量チェックを繰り返すと寿命を縮めます。用途は USB メモリ / SD カードの検品です。
 
