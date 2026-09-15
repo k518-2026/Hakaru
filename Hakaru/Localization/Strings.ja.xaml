@@ -1,0 +1,59 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:s="clr-namespace:System;assembly=System.Runtime">
+
+    <s:String x:Key="AppTitle">Hakaru — ディスク速度ベンチマーク</s:String>
+    <s:String x:Key="Language">言語</s:String>
+    <s:String x:Key="Drive">ドライブ</s:String>
+    <s:String x:Key="Refresh">再読み込み</s:String>
+    <s:String x:Key="DriveInfoFmt">全体 {0} ・ 空き {1}</s:String>
+
+    <s:String x:Key="TabBenchmark">速度テスト</s:String>
+    <s:String x:Key="TabCapacity">容量チェック</s:String>
+
+    <s:String x:Key="BenchSize">テストサイズ</s:String>
+    <s:String x:Key="BenchStart">開始</s:String>
+    <s:String x:Key="BenchStop">中止</s:String>
+    <s:String x:Key="BenchSeqRead">シーケンシャル読み込み (1 MiB)</s:String>
+    <s:String x:Key="BenchSeqWrite">シーケンシャル書き込み (1 MiB)</s:String>
+    <s:String x:Key="BenchRandRead">ランダム読み込み (4 KiB, Q1)</s:String>
+    <s:String x:Key="BenchRandWrite">ランダム書き込み (4 KiB, Q1)</s:String>
+    <s:String x:Key="BenchIdle">準備完了。ドライブを選んで「開始」を押してください。</s:String>
+    <s:String x:Key="BenchRunningFmt">{0}…  {1}</s:String>
+    <s:String x:Key="BenchDoneFmt">完了。テストファイル: {0}</s:String>
+    <s:String x:Key="BenchCanceled">中止しました。</s:String>
+
+    <s:String x:Key="CapModeFull">空き容量すべてをテスト</s:String>
+    <s:String x:Key="CapModeQuick">クイックテストのみ</s:String>
+    <s:String x:Key="CapQuickSize">クイックテストのサイズ</s:String>
+    <s:String x:Key="CapKeepFiles">チェック後もテストファイルを残す</s:String>
+    <s:String x:Key="CapStart">容量チェックを開始</s:String>
+    <s:String x:Key="CapStop">中止</s:String>
+    <s:String x:Key="CapWarnTitle">開始する前に</s:String>
+    <s:String x:Key="CapWarn">ドライブの空き容量をテストデータで埋め、読み戻して照合します。既存のファイルには一切触れません。終わるまでドライブを抜かないでください。</s:String>
+    <s:String x:Key="CapPhasePreparing">準備中…</s:String>
+    <s:String x:Key="CapPhaseWriting">テストデータを書き込み中</s:String>
+    <s:String x:Key="CapPhaseVerifying">読み戻して照合中</s:String>
+    <s:String x:Key="CapPhaseCleaning">テストファイルを削除中</s:String>
+    <s:String x:Key="CapProgressFmt">{0} — {1} / {2}  ·  {3}  ·  残り {4}</s:String>
+    <s:String x:Key="CapResultGenuineFmt">問題は見つかりませんでした。{0} を書き込み・照合済み。書き込み {1}、読み込み {2}。</s:String>
+    <s:String x:Key="CapResultSuspiciousTitle">⚠ 容量偽装の疑いあり</s:String>
+    <s:String x:Key="CapResultSuspiciousFmt">{0} までは正常に照合できました。{1} から異常が始まります。実際に使える容量は約 {0} です。</s:String>
+    <s:String x:Key="CapReasonAliased">アドレスが巻き戻っています。より大きいオフセットに同じ物理メモリを使い回しています。</s:String>
+    <s:String x:Key="CapReasonCorrupt">読み戻したデータが、書き込んだ内容と一致しませんでした。</s:String>
+    <s:String x:Key="CapResultErrorFmt">チェックを実行できませんでした: {0}</s:String>
+    <s:String x:Key="CapResultCanceledFmt">中止しました。ここまでで書き込み {0}、照合 {1}。</s:String>
+    <s:String x:Key="CapNoFreeSpace">このドライブにはチェックに必要な空き容量がありません。</s:String>
+
+    <s:String x:Key="WriteLabel">書き込み</s:String>
+    <s:String x:Key="ReadLabel">読み込み</s:String>
+    <s:String x:Key="ResultTitle">結果</s:String>
+    <s:String x:Key="LeftoverFound">このドライブに Hakaru のテストファイルが残っています。</s:String>
+    <s:String x:Key="CleanNow">削除する</s:String>
+    <s:String x:Key="Cleaned">テストファイルを削除しました。</s:String>
+    <s:String x:Key="OpenFolderBtn">ドライブを開く</s:String>
+    <s:String x:Key="SystemDriveWarnFmt">{0} は Windows のドライブのようです。このテストは USB メモリや SD カード向けです。それでも続けますか？</s:String>
+    <s:String x:Key="ConfirmTitle">確認</s:String>
+    <s:String x:Key="NoDrive">ドライブが選択されていません。</s:String>
+
+</ResourceDictionary>

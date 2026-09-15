@@ -1,0 +1,59 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:s="clr-namespace:System;assembly=System.Runtime">
+
+    <s:String x:Key="AppTitle">Hakaru — 磁盘速度基准测试</s:String>
+    <s:String x:Key="Language">语言</s:String>
+    <s:String x:Key="Drive">驱动器</s:String>
+    <s:String x:Key="Refresh">刷新</s:String>
+    <s:String x:Key="DriveInfoFmt">总计 {0} · 可用 {1}</s:String>
+
+    <s:String x:Key="TabBenchmark">速度测试</s:String>
+    <s:String x:Key="TabCapacity">容量检测</s:String>
+
+    <s:String x:Key="BenchSize">测试大小</s:String>
+    <s:String x:Key="BenchStart">开始</s:String>
+    <s:String x:Key="BenchStop">停止</s:String>
+    <s:String x:Key="BenchSeqRead">顺序读取 (1 MiB)</s:String>
+    <s:String x:Key="BenchSeqWrite">顺序写入 (1 MiB)</s:String>
+    <s:String x:Key="BenchRandRead">随机读取 (4 KiB, Q1)</s:String>
+    <s:String x:Key="BenchRandWrite">随机写入 (4 KiB, Q1)</s:String>
+    <s:String x:Key="BenchIdle">已就绪。请选择驱动器并点击“开始”。</s:String>
+    <s:String x:Key="BenchRunningFmt">{0}…  {1}</s:String>
+    <s:String x:Key="BenchDoneFmt">完成。测试文件：{0}</s:String>
+    <s:String x:Key="BenchCanceled">已停止。</s:String>
+
+    <s:String x:Key="CapModeFull">测试全部可用空间</s:String>
+    <s:String x:Key="CapModeQuick">仅快速测试</s:String>
+    <s:String x:Key="CapQuickSize">快速测试大小</s:String>
+    <s:String x:Key="CapKeepFiles">检测后保留测试文件</s:String>
+    <s:String x:Key="CapStart">开始容量检测</s:String>
+    <s:String x:Key="CapStop">停止</s:String>
+    <s:String x:Key="CapWarnTitle">开始之前</s:String>
+    <s:String x:Key="CapWarn">此操作会用测试数据填满驱动器的可用空间，然后回读校验。不会触碰你现有的文件。完成前请勿拔出驱动器。</s:String>
+    <s:String x:Key="CapPhasePreparing">准备中…</s:String>
+    <s:String x:Key="CapPhaseWriting">正在写入测试数据</s:String>
+    <s:String x:Key="CapPhaseVerifying">正在回读并校验</s:String>
+    <s:String x:Key="CapPhaseCleaning">正在删除测试文件</s:String>
+    <s:String x:Key="CapProgressFmt">{0} — {1} / {2}  ·  {3}  ·  剩余 {4}</s:String>
+    <s:String x:Key="CapResultGenuineFmt">未发现问题。已写入并校验 {0}。写入 {1}，读取 {2}。</s:String>
+    <s:String x:Key="CapResultSuspiciousTitle">⚠ 疑似虚标容量</s:String>
+    <s:String x:Key="CapResultSuspiciousFmt">校验正常直到 {0}。问题从 {1} 开始。实际可用容量约为 {0}。</s:String>
+    <s:String x:Key="CapReasonAliased">驱动器地址发生回绕——它对更高的偏移复用了相同的物理存储。</s:String>
+    <s:String x:Key="CapReasonCorrupt">回读的数据与写入的内容不一致。</s:String>
+    <s:String x:Key="CapResultErrorFmt">无法运行检测：{0}</s:String>
+    <s:String x:Key="CapResultCanceledFmt">已停止。目前已写入 {0}，已校验 {1}。</s:String>
+    <s:String x:Key="CapNoFreeSpace">该驱动器可用空间不足，无法运行检测。</s:String>
+
+    <s:String x:Key="WriteLabel">写入</s:String>
+    <s:String x:Key="ReadLabel">读取</s:String>
+    <s:String x:Key="ResultTitle">结果</s:String>
+    <s:String x:Key="LeftoverFound">在该驱动器上发现了 Hakaru 遗留的测试文件。</s:String>
+    <s:String x:Key="CleanNow">删除它们</s:String>
+    <s:String x:Key="Cleaned">已删除测试文件。</s:String>
+    <s:String x:Key="OpenFolderBtn">打开驱动器</s:String>
+    <s:String x:Key="SystemDriveWarnFmt">{0} 看起来是你的 Windows 系统盘。此测试适用于 U 盘和 SD 卡。仍要继续吗？</s:String>
+    <s:String x:Key="ConfirmTitle">确认</s:String>
+    <s:String x:Key="NoDrive">未选择驱动器。</s:String>
+
+</ResourceDictionary>

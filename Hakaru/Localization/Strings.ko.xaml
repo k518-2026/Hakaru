@@ -1,0 +1,59 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:s="clr-namespace:System;assembly=System.Runtime">
+
+    <s:String x:Key="AppTitle">Hakaru — 디스크 속도 벤치마크</s:String>
+    <s:String x:Key="Language">언어</s:String>
+    <s:String x:Key="Drive">드라이브</s:String>
+    <s:String x:Key="Refresh">새로 고침</s:String>
+    <s:String x:Key="DriveInfoFmt">전체 {0} · 여유 {1}</s:String>
+
+    <s:String x:Key="TabBenchmark">속도 테스트</s:String>
+    <s:String x:Key="TabCapacity">용량 점검</s:String>
+
+    <s:String x:Key="BenchSize">테스트 크기</s:String>
+    <s:String x:Key="BenchStart">시작</s:String>
+    <s:String x:Key="BenchStop">중지</s:String>
+    <s:String x:Key="BenchSeqRead">순차 읽기 (1 MiB)</s:String>
+    <s:String x:Key="BenchSeqWrite">순차 쓰기 (1 MiB)</s:String>
+    <s:String x:Key="BenchRandRead">랜덤 읽기 (4 KiB, Q1)</s:String>
+    <s:String x:Key="BenchRandWrite">랜덤 쓰기 (4 KiB, Q1)</s:String>
+    <s:String x:Key="BenchIdle">준비되었습니다. 드라이브를 선택하고 시작을 누르세요.</s:String>
+    <s:String x:Key="BenchRunningFmt">{0}…  {1}</s:String>
+    <s:String x:Key="BenchDoneFmt">완료. 테스트 파일: {0}</s:String>
+    <s:String x:Key="BenchCanceled">중지되었습니다.</s:String>
+
+    <s:String x:Key="CapModeFull">전체 여유 공간 테스트</s:String>
+    <s:String x:Key="CapModeQuick">빠른 테스트만</s:String>
+    <s:String x:Key="CapQuickSize">빠른 테스트 크기</s:String>
+    <s:String x:Key="CapKeepFiles">점검 후 테스트 파일 유지</s:String>
+    <s:String x:Key="CapStart">용량 점검 시작</s:String>
+    <s:String x:Key="CapStop">중지</s:String>
+    <s:String x:Key="CapWarnTitle">시작하기 전에</s:String>
+    <s:String x:Key="CapWarn">드라이브의 여유 공간을 테스트 데이터로 채운 뒤 다시 읽어 검증합니다. 기존 파일은 건드리지 않습니다. 완료될 때까지 드라이브를 분리하지 마세요.</s:String>
+    <s:String x:Key="CapPhasePreparing">준비 중…</s:String>
+    <s:String x:Key="CapPhaseWriting">테스트 데이터 쓰는 중</s:String>
+    <s:String x:Key="CapPhaseVerifying">다시 읽어 검증하는 중</s:String>
+    <s:String x:Key="CapPhaseCleaning">테스트 파일 삭제 중</s:String>
+    <s:String x:Key="CapProgressFmt">{0} — {1} / {2}  ·  {3}  ·  남은 시간 {4}</s:String>
+    <s:String x:Key="CapResultGenuineFmt">문제가 없습니다. {0} 쓰기 및 검증 완료. 쓰기 {1}, 읽기 {2}.</s:String>
+    <s:String x:Key="CapResultSuspiciousTitle">⚠ 용량 위조 의심</s:String>
+    <s:String x:Key="CapResultSuspiciousFmt">{0}까지는 정상적으로 검증되었습니다. {1}부터 문제가 시작됩니다. 실제 사용 가능한 용량은 약 {0}입니다.</s:String>
+    <s:String x:Key="CapReasonAliased">드라이브 주소가 되돌아갔습니다. 더 높은 오프셋에 같은 물리 메모리를 재사용합니다.</s:String>
+    <s:String x:Key="CapReasonCorrupt">다시 읽은 데이터가 쓴 내용과 일치하지 않습니다.</s:String>
+    <s:String x:Key="CapResultErrorFmt">점검을 실행할 수 없습니다: {0}</s:String>
+    <s:String x:Key="CapResultCanceledFmt">중지되었습니다. 지금까지 쓰기 {0}, 검증 {1}.</s:String>
+    <s:String x:Key="CapNoFreeSpace">이 드라이브에는 점검에 필요한 여유 공간이 없습니다.</s:String>
+
+    <s:String x:Key="WriteLabel">쓰기</s:String>
+    <s:String x:Key="ReadLabel">읽기</s:String>
+    <s:String x:Key="ResultTitle">결과</s:String>
+    <s:String x:Key="LeftoverFound">이 드라이브에서 Hakaru 테스트 파일이 발견되었습니다.</s:String>
+    <s:String x:Key="CleanNow">삭제</s:String>
+    <s:String x:Key="Cleaned">테스트 파일을 삭제했습니다.</s:String>
+    <s:String x:Key="OpenFolderBtn">드라이브 열기</s:String>
+    <s:String x:Key="SystemDriveWarnFmt">{0}은(는) Windows 드라이브로 보입니다. 이 테스트는 USB 메모리와 SD 카드용입니다. 그래도 계속하시겠습니까?</s:String>
+    <s:String x:Key="ConfirmTitle">확인</s:String>
+    <s:String x:Key="NoDrive">드라이브가 선택되지 않았습니다.</s:String>
+
+</ResourceDictionary>

@@ -1,0 +1,59 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:s="clr-namespace:System;assembly=System.Runtime">
+
+    <s:String x:Key="AppTitle">Hakaru — Test de vitesse de disque</s:String>
+    <s:String x:Key="Language">Langue</s:String>
+    <s:String x:Key="Drive">Lecteur</s:String>
+    <s:String x:Key="Refresh">Actualiser</s:String>
+    <s:String x:Key="DriveInfoFmt">{0} au total · {1} libres</s:String>
+
+    <s:String x:Key="TabBenchmark">Vitesse</s:String>
+    <s:String x:Key="TabCapacity">Vérifier la capacité</s:String>
+
+    <s:String x:Key="BenchSize">Taille du test</s:String>
+    <s:String x:Key="BenchStart">Démarrer</s:String>
+    <s:String x:Key="BenchStop">Arrêter</s:String>
+    <s:String x:Key="BenchSeqRead">Lecture séquentielle (1 Mio)</s:String>
+    <s:String x:Key="BenchSeqWrite">Écriture séquentielle (1 Mio)</s:String>
+    <s:String x:Key="BenchRandRead">Lecture aléatoire (4 Kio, Q1)</s:String>
+    <s:String x:Key="BenchRandWrite">Écriture aléatoire (4 Kio, Q1)</s:String>
+    <s:String x:Key="BenchIdle">Prêt. Choisissez un lecteur et appuyez sur Démarrer.</s:String>
+    <s:String x:Key="BenchRunningFmt">{0}…  {1}</s:String>
+    <s:String x:Key="BenchDoneFmt">Terminé. Fichier de test : {0}</s:String>
+    <s:String x:Key="BenchCanceled">Arrêté.</s:String>
+
+    <s:String x:Key="CapModeFull">Tester tout l'espace libre</s:String>
+    <s:String x:Key="CapModeQuick">Test rapide uniquement</s:String>
+    <s:String x:Key="CapQuickSize">Taille du test rapide</s:String>
+    <s:String x:Key="CapKeepFiles">Conserver les fichiers de test après la vérification</s:String>
+    <s:String x:Key="CapStart">Lancer la vérification de capacité</s:String>
+    <s:String x:Key="CapStop">Arrêter</s:String>
+    <s:String x:Key="CapWarnTitle">Avant de commencer</s:String>
+    <s:String x:Key="CapWarn">Cette opération remplit l'espace libre du lecteur avec des données de test, puis les relit pour les vérifier. Vos fichiers existants ne sont jamais touchés. Ne retirez pas le lecteur avant la fin.</s:String>
+    <s:String x:Key="CapPhasePreparing">Préparation…</s:String>
+    <s:String x:Key="CapPhaseWriting">Écriture des données de test</s:String>
+    <s:String x:Key="CapPhaseVerifying">Relecture et vérification</s:String>
+    <s:String x:Key="CapPhaseCleaning">Suppression des fichiers de test</s:String>
+    <s:String x:Key="CapProgressFmt">{0} — {1} / {2}  ·  {3}  ·  reste {4}</s:String>
+    <s:String x:Key="CapResultGenuineFmt">Aucun problème détecté. {0} écrits et vérifiés. Écriture {1}, lecture {2}.</s:String>
+    <s:String x:Key="CapResultSuspiciousTitle">⚠ Capacité probablement falsifiée</s:String>
+    <s:String x:Key="CapResultSuspiciousFmt">Vérifié correctement jusqu'à {0}. Le problème commence à {1}. La capacité réellement utilisable est d'environ {0}.</s:String>
+    <s:String x:Key="CapReasonAliased">L'adressage du lecteur boucle : il réutilise la même mémoire physique pour les décalages plus élevés.</s:String>
+    <s:String x:Key="CapReasonCorrupt">Les données relues ne correspondent pas à ce qui a été écrit.</s:String>
+    <s:String x:Key="CapResultErrorFmt">Impossible d'exécuter la vérification : {0}</s:String>
+    <s:String x:Key="CapResultCanceledFmt">Arrêté. Jusqu'ici {0} écrits, {1} vérifiés.</s:String>
+    <s:String x:Key="CapNoFreeSpace">Espace libre insuffisant sur ce lecteur pour la vérification.</s:String>
+
+    <s:String x:Key="WriteLabel">Écriture</s:String>
+    <s:String x:Key="ReadLabel">Lecture</s:String>
+    <s:String x:Key="ResultTitle">Résultat</s:String>
+    <s:String x:Key="LeftoverFound">Des fichiers de test Hakaru ont été trouvés sur ce lecteur.</s:String>
+    <s:String x:Key="CleanNow">Les supprimer</s:String>
+    <s:String x:Key="Cleaned">Fichiers de test supprimés.</s:String>
+    <s:String x:Key="OpenFolderBtn">Ouvrir le lecteur</s:String>
+    <s:String x:Key="SystemDriveWarnFmt">{0} semble être votre lecteur Windows. Ce test est conçu pour les clés USB et les cartes SD. Continuer quand même ?</s:String>
+    <s:String x:Key="ConfirmTitle">Confirmer</s:String>
+    <s:String x:Key="NoDrive">Aucun lecteur sélectionné.</s:String>
+
+</ResourceDictionary>

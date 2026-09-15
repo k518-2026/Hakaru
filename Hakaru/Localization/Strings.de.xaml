@@ -1,0 +1,59 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:s="clr-namespace:System;assembly=System.Runtime">
+
+    <s:String x:Key="AppTitle">Hakaru — Datenträger-Geschwindigkeitstest</s:String>
+    <s:String x:Key="Language">Sprache</s:String>
+    <s:String x:Key="Drive">Laufwerk</s:String>
+    <s:String x:Key="Refresh">Aktualisieren</s:String>
+    <s:String x:Key="DriveInfoFmt">{0} gesamt · {1} frei</s:String>
+
+    <s:String x:Key="TabBenchmark">Geschwindigkeit</s:String>
+    <s:String x:Key="TabCapacity">Kapazitätsprüfung</s:String>
+
+    <s:String x:Key="BenchSize">Testgröße</s:String>
+    <s:String x:Key="BenchStart">Start</s:String>
+    <s:String x:Key="BenchStop">Stopp</s:String>
+    <s:String x:Key="BenchSeqRead">Sequenzielles Lesen (1 MiB)</s:String>
+    <s:String x:Key="BenchSeqWrite">Sequenzielles Schreiben (1 MiB)</s:String>
+    <s:String x:Key="BenchRandRead">Zufälliges Lesen (4 KiB, Q1)</s:String>
+    <s:String x:Key="BenchRandWrite">Zufälliges Schreiben (4 KiB, Q1)</s:String>
+    <s:String x:Key="BenchIdle">Bereit. Laufwerk wählen und Start drücken.</s:String>
+    <s:String x:Key="BenchRunningFmt">{0}…  {1}</s:String>
+    <s:String x:Key="BenchDoneFmt">Fertig. Testdatei: {0}</s:String>
+    <s:String x:Key="BenchCanceled">Angehalten.</s:String>
+
+    <s:String x:Key="CapModeFull">Gesamten freien Speicher testen</s:String>
+    <s:String x:Key="CapModeQuick">Nur Schnelltest</s:String>
+    <s:String x:Key="CapQuickSize">Größe des Schnelltests</s:String>
+    <s:String x:Key="CapKeepFiles">Testdateien nach der Prüfung behalten</s:String>
+    <s:String x:Key="CapStart">Kapazitätsprüfung starten</s:String>
+    <s:String x:Key="CapStop">Stopp</s:String>
+    <s:String x:Key="CapWarnTitle">Vor dem Start</s:String>
+    <s:String x:Key="CapWarn">Der freie Speicher des Laufwerks wird mit Testdaten gefüllt und anschließend zur Prüfung zurückgelesen. Vorhandene Dateien werden nicht angetastet. Entfernen Sie das Laufwerk nicht, bis der Vorgang abgeschlossen ist.</s:String>
+    <s:String x:Key="CapPhasePreparing">Vorbereitung…</s:String>
+    <s:String x:Key="CapPhaseWriting">Testdaten werden geschrieben</s:String>
+    <s:String x:Key="CapPhaseVerifying">Zurücklesen und Prüfen</s:String>
+    <s:String x:Key="CapPhaseCleaning">Testdateien werden gelöscht</s:String>
+    <s:String x:Key="CapProgressFmt">{0} — {1} / {2}  ·  {3}  ·  Rest {4}</s:String>
+    <s:String x:Key="CapResultGenuineFmt">Kein Problem gefunden. {0} geschrieben und geprüft. Schreiben {1}, Lesen {2}.</s:String>
+    <s:String x:Key="CapResultSuspiciousTitle">⚠ Wahrscheinlich vorgetäuschte Kapazität</s:String>
+    <s:String x:Key="CapResultSuspiciousFmt">Bis {0} korrekt geprüft. Ab {1} treten Fehler auf. Die tatsächlich nutzbare Kapazität beträgt etwa {0}.</s:String>
+    <s:String x:Key="CapReasonAliased">Die Adressierung des Laufwerks springt zurück — für höhere Offsets wird derselbe physische Speicher wiederverwendet.</s:String>
+    <s:String x:Key="CapReasonCorrupt">Die zurückgelesenen Daten stimmen nicht mit den geschriebenen überein.</s:String>
+    <s:String x:Key="CapResultErrorFmt">Prüfung nicht möglich: {0}</s:String>
+    <s:String x:Key="CapResultCanceledFmt">Angehalten. Bisher {0} geschrieben, {1} geprüft.</s:String>
+    <s:String x:Key="CapNoFreeSpace">Nicht genügend freier Speicher auf diesem Laufwerk für die Prüfung.</s:String>
+
+    <s:String x:Key="WriteLabel">Schreiben</s:String>
+    <s:String x:Key="ReadLabel">Lesen</s:String>
+    <s:String x:Key="ResultTitle">Ergebnis</s:String>
+    <s:String x:Key="LeftoverFound">Auf diesem Laufwerk wurden übrig gebliebene Hakaru-Testdateien gefunden.</s:String>
+    <s:String x:Key="CleanNow">Löschen</s:String>
+    <s:String x:Key="Cleaned">Testdateien gelöscht.</s:String>
+    <s:String x:Key="OpenFolderBtn">Laufwerk öffnen</s:String>
+    <s:String x:Key="SystemDriveWarnFmt">{0} scheint Ihr Windows-Laufwerk zu sein. Dieser Test ist für USB-Sticks und SD-Karten gedacht. Trotzdem fortfahren?</s:String>
+    <s:String x:Key="ConfirmTitle">Bestätigen</s:String>
+    <s:String x:Key="NoDrive">Kein Laufwerk ausgewählt.</s:String>
+
+</ResourceDictionary>
